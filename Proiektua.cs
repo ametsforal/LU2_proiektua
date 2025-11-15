@@ -387,7 +387,7 @@ class Proiektua
                 break;
         }
     }
-    public void Hanburgesa()
+    public void Hanburgesa() //hanburgesa jan nahi baduzu hemen eramango dizu eta aukerak erakutsiko ditu
     {
         Console.Clear();
         Console.WriteLine("Enpresa hauek ditugu hanburgesa erosteko:");
@@ -399,7 +399,7 @@ class Proiektua
         Console.WriteLine("Mesedez, aukeratu bat:");
         Hanburgesa_aukera();
     }
-    public void Hanburgesa_aukera()
+    public void Hanburgesa_aukera() //goiko menuko aukerak aukeratzeko
     {
         string? aukera2 = Console.ReadLine();
         int auk2 = int.Parse(aukera2!);
@@ -423,7 +423,7 @@ class Proiektua
 
 
     List<string> mcdonalds_menu = new List<string>() { "Big Mac", "Cheeseburger", "Pulled Pork", "Hanburgesa klasikoa" };
-    public void McDonalds()
+    public void McDonalds() // Mcdonalds-en jan nahi baduzu hemen eramango dizu
     {
         Console.Clear();
         Console.WriteLine("Ongi etorri McDonald's-era!");
@@ -436,7 +436,7 @@ class Proiektua
         Console.WriteLine("Mesedez, aukeratu bat:");
         McDonalds_aukeratu();
     }
-    public void McDonalds_aukeratu()
+    public void McDonalds_aukeratu() //mcdonalds-eko janari aukerak, eta eskarira gehitu-ko dira aukeratutako gauzak
     {
         string? aukera = Console.ReadLine();
         int auk = int.Parse(aukera!);
@@ -472,7 +472,7 @@ class Proiektua
         }
     }
     List<string> burgerking = new List<string>() { "Whopper", "Chesseburger", "Double Whopper", "Hanburgesa begetala" };
-    public void BurgerKing()
+    public void BurgerKing() // Burger king-en jan nahi baduzu hemen eramango dizu
     {
         Console.Clear();
         Console.WriteLine("Ongi etorri BurgerKing-era!");
@@ -483,9 +483,12 @@ class Proiektua
         }
         Console.WriteLine("5. Itzuli aurreko menura");
         Console.WriteLine("Mesedez, aukeratu bat:");
+        BurgerKing_aukeratu();
+    }
+    public void BurgerKing_aukeratu() //hemen burgerking-eko zer jan nahi duzun aukeratuko duzu eta eskarira gehituko da
+    {
         string? aukera = Console.ReadLine();
         int auk = int.Parse(aukera!);
-
         switch (auk)
         {
             case 1:
@@ -525,7 +528,7 @@ class Proiektua
 
     List<string> edariak = new List<string>() {"1. Coca-cola", "2. Fanta", "3. Sprite",
     "4. Aquarius","5. Ura" };
-    public void edaria()
+    public void edaria() //menu guztietatik hemen eramango dizu, edaria aukeratzeko
     {
         Console.Clear();
         Console.WriteLine("Edaririk nahi duzu? Bai(b)/Ez(e)");
@@ -582,7 +585,7 @@ class Proiektua
             Console.WriteLine("Aukera ez da zuzena. Mesedez, sartu b edo e ");
         }
     }
-    public void postreanahi()
+    public void postreanahi() //edaria ondoren postrea nahi duzun galdetuko du
     {
         Console.Clear();
         Console.WriteLine("Postrerik nahi duzu? Bai(b)/Ez(e)");
@@ -603,7 +606,7 @@ class Proiektua
         }
     }
     List<string> postreak = new List<string>() { "1. Izozkia", "2. Pastela", "3. Fruitua", "4. Donut" };
-    public void postrea()
+    public void postrea() //Postreak erakutsiko ditu
     {
         Console.Clear();
         Console.WriteLine("Hemen daude gure postreak");
@@ -615,7 +618,7 @@ class Proiektua
         Console.WriteLine("Aukeratu bat mesedez:");
         postrea_aukeratu();
     }
-    public void postrea_aukeratu()
+    public void postrea_aukeratu() //postrea aukeratuko duzu
     {
         string? aukera = Console.ReadLine();
         int auk = int.Parse(aukera!);
@@ -646,7 +649,7 @@ class Proiektua
         }
         eskaeragehiago();
     }
-    public void eskaeragehiago()
+    public void eskaeragehiago() //Zerbait gehiago egin nahi duzun galdetuko du, erantzuna bai bada, hasierako menura eramango dizu
     {
         Console.WriteLine("Zerbait gehiago egin nahi duzu? Bai(b)/Ez(e)");
         string? aukera = Console.ReadLine();
@@ -664,7 +667,7 @@ class Proiektua
             eskaeragehiago();
         }
     }
-    public void konfirmazioa()
+    public void konfirmazioa() // Zure eskaerak erakutsiko ditu eta zuk esango duzu konforme zauden edo ez
     {
         Console.Clear();
         if (menu_eskaerak.Count == 0)
@@ -705,7 +708,7 @@ class Proiektua
             }
         }
     }
-    public void bezero_datuak()
+    public void bezero_datuak() // eskaera bukatzeko zure datuak eskatuko ditu
     {
         Console.WriteLine("Bukatzeko zure datuak sartu:");
         Console.Write("Izen abizenak: ");
@@ -715,7 +718,8 @@ class Proiektua
         Console.Write("telefono zenbakia: ");
         string? zenbakia = Console.ReadLine();
         Console.WriteLine();
-        Console.WriteLine("Hauek dira zure helbide datuak eta zure eskaerak");
+        Console.Clear();
+        Console.WriteLine("Hauek dira zure helbide datuak:");
         Console.WriteLine("ZURE DATUAK:");
         Console.WriteLine($"Izen abizenak: {izena}");
         Console.WriteLine($"Helbidea: {helbidea}");
@@ -725,7 +729,7 @@ class Proiektua
         Console.WriteLine("Eskaera arrakastatsua izan da!");
         eskaera_berria();
     }
-    public void eskaera_berria()
+    public void eskaera_berria() // Azkenik eskaera berririk nahi duzun egin galdetuko du eta programa bukatuko da ez erantzuten baduzu
     {
         Console.WriteLine("Eskaera berri bat egin nahi duzu? Bai(b)/Ez(e)");
         string? aukera = Console.ReadLine();
